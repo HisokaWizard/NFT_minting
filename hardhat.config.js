@@ -3,16 +3,16 @@ require('@nomiclabs/hardhat-ethers');
 require('dotenv').config();
 const { MY_SECRET } = process.env;
 module.exports = {
-  defaultNetwork: 'Polygon',
+  defaultNetwork: 'PolygonMumbai',
   networks: {
     hardhat: {},
-    Polygon: {
-      url: 'https://polygon-mainnet.infura.io',
+    PolygonMumbai: {
+      url: 'https://rpc-mumbai.maticvigil.com',
       accounts: [MY_SECRET],
     },
   },
   solidity: {
-    version: '0.8.12',
+    version: '0.8.20',
     settings: {
       optimizer: {
         enabled: true,

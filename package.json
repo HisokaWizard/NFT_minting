@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy-contract": "npx hardhat run scripts/deploy-contract.js --network Polygon",
-    "mint-nft": "npx hardhat run scripts/mint-nft.js --network Polygon"
+    "deploy-contract": "npx hardhat run scripts/deploy-contract.js --network PolygonMumbai",
+    "mint-nft": "npx hardhat run scripts/mint-nft.js --network PolygonMumbai"
   },
   "author": "Nikolaev Petr",
   "license": "ISC",
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.2.3",
-    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/contracts": "^5.0.0",
     "dotenv": "^16.3.1",
     "hardhat": "^2.19.1",
     "nft.storage": "^7.1.1"

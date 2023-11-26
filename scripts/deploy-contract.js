@@ -1,9 +1,13 @@
+const dotenv = require('dotenv');
+dotenv.config();
+const { MY_ADDRESS } = process.env;
+
 async function deployContract() {
-  const HisokaNFT = await ethers.getContractFactory('HisokaNFT');
-  const hisokaNFT = await HisokaNFT.deploy();
-  await hisokaNFT.deployed();
+  const HisokaWizardNFT = await ethers.getContractFactory('HisokaWizard');
+  const hisokaWizardNFT = await HisokaWizardNFT.deploy(MY_ADDRESS);
+  await hisokaWizardNFT.deployed();
   // This solves the bug in Mumbai network where the contract address is not the real one
-  const txHash = hisokaNFT.deployTransaction.hash;
+  const txHash = hisokaWizardNFT.deployTransaction.hash;
   const txReceipt = await ethers.provider.waitForTransaction(txHash);
   const contractAddress = txReceipt.contractAddress;
   console.log('Contract deployed to address:', contractAddress);
